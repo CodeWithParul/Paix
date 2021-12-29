@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:paix_app/components/rounded_button.dart';
+import 'package:paix_app/Screen/Login/login_screen.dart';
+import 'package:paix_app/Screen/Signup/signup_screen.dart';
+import 'package:paix_app/components/roundedbutton.dart';
 import 'package:paix_app/screens/background_screen.dart';
-import 'package:paix_app/screens/login_screen.dart';
-import 'package:paix_app/screens/registration_screen.dart';
+//import 'package:paix_app/screens/login_screen.dart';
+//import 'package:paix_app/screens/registration_screen.dart';
 
 class WelcomeScreens extends StatefulWidget {
   @override
@@ -35,9 +37,9 @@ class _WelcomeScreensState extends State<WelcomeScreens> {
               SizedBox(
                 height: 150.0,
               ),
-              RoundedButton(
+              RoundedButtons(
                 title: 'Log In',
-                colour: Color(0xFF8E97FD),
+                colour: Color(0xFFC69AFF),
                 onPressed: () {
                   Navigator.push(
                     context,
@@ -45,14 +47,13 @@ class _WelcomeScreensState extends State<WelcomeScreens> {
                   );
                 },
               ),
-              RoundedButton(
-                title: 'Sign In',
-                colour: Color(0xFF8E97FD),
+              RoundedButtons(
+                title: 'Sign Up',
+                colour: Color(0xFFA879DC),
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(
-                        builder: (context) => RegistrationScreen()),
+                    MaterialPageRoute(builder: (context) => SignUpScreen()),
                   );
                 },
               ),

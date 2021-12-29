@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:paix_app/screens/welcome.dart';
-//import 'package:paix_app/screens/welcomescreen.dart';
+//import 'package:paix_app/models/category_backend.dart';
+import 'package:paix_app/screens/welcomescreen.dart';
+import 'package:firebase_core/firebase_core.dart';
 
-void main() {
+void main() async {
+  // Ensure that Firebase is initialized
+  WidgetsFlutterBinding.ensureInitialized();
+  // Initialize Firebase
+  await Firebase.initializeApp();
+  //
   runApp(MyApp());
 }
 
@@ -26,7 +32,11 @@ class MyApp extends StatelessWidget {
               ),
             ),
       ),
-      home: WelcomeScreen(),
+      home: WelcomeScreens(),
+      // routes: {
+      //   '/': (ctx) => WelcomeScreens(),
+      //   CategoryBackend.routeName: (ctx) => CategoryBackend(),
+      // },
     );
   }
 }

@@ -1,7 +1,35 @@
 import 'package:flutter/material.dart';
 import 'package:paix_app/screens/categories_screens.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
-class WelcomeScreen extends StatelessWidget {
+class WelcomeScreen extends StatefulWidget {
+  @override
+  _WelcomeScreenState createState() => _WelcomeScreenState();
+}
+
+class _WelcomeScreenState extends State<WelcomeScreen> {
+  final FirebaseAuth _auth = FirebaseAuth.instance;
+
+  User loggedInUser;
+
+  @override
+  void initState() {
+    super.initState();
+    getCurrentUser();
+  }
+
+  void getCurrentUser() {
+    try {
+      final User user = _auth.currentUser;
+      if (user != null) {
+        loggedInUser = user;
+        //  print(loggedInUser.email);
+      }
+    } catch (e) {
+      print(e);
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -10,7 +38,7 @@ class WelcomeScreen extends StatelessWidget {
           decoration: BoxDecoration(
             image: DecorationImage(
               alignment: Alignment.center,
-              image: AssetImage('assets/images/welcome.png'),
+              image: AssetImage('assets/images/getstarted.png'),
               fit: BoxFit.fill,
             ),
           ),
@@ -20,7 +48,7 @@ class WelcomeScreen extends StatelessWidget {
           padding: EdgeInsets.only(bottom: 50.0),
           child: Material(
             elevation: 5.0,
-            color: Colors.blue.shade900,
+            color: Color(0xFFE6E6E6),
             borderRadius: BorderRadius.circular(30.0),
             child: MaterialButton(
               onPressed: () {
@@ -34,7 +62,7 @@ class WelcomeScreen extends StatelessWidget {
               child: Text(
                 'Get Started',
                 style: TextStyle(
-                  color: Colors.black54,
+                  color: Color(0xFF3F414E),
                 ),
               ),
             ),

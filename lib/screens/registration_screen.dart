@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:paix_app/components/rounded_button.dart';
+import 'package:paix_app/components/roundedbutton.dart';
 import 'package:paix_app/constants.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:paix_app/screens/welcome.dart';
+import 'package:modal_progress_hud/modal_progress_hud.dart';
 
 class RegistrationScreen extends StatefulWidget {
   @override
@@ -8,6 +11,10 @@ class RegistrationScreen extends StatefulWidget {
 }
 
 class _RegistrationScreenState extends State<RegistrationScreen> {
+  final FirebaseAuth _auth = FirebaseAuth.instance;
+  bool showSpinner = false;
+  String email;
+  String password;
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -24,48 +31,76 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
         ),
         Scaffold(
           backgroundColor: Colors.transparent,
-          body: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: <Widget>[
-              // Container(
-              //   decoration: BoxDecoration(
-              //     image: DecorationImage(
-              //       alignment: Alignment.center,
-              //       image: AssetImage('assets/images/create.png'),
-              //       fit: BoxFit.fill,
-              //     ),
-              //   ),
-              // ),
-              SizedBox(
-                height: 48.0,
-              ),
-              TextField(
-                onChanged: (value) {
-                  //Do something with the user input.
-                },
-                decoration: kTextFieldDecoration.copyWith(
-                    hintText: 'Enter your e-mail'),
-              ),
-              SizedBox(
-                height: 8.0,
-              ),
-              TextField(
-                onChanged: (value) {
-                  //Do something with the user input.
-                },
-                decoration: kTextFieldDecoration.copyWith(
-                    hintText: 'Enter your password'),
-              ),
-              SizedBox(
-                height: 24.0,
-              ),
-              RoundedButton(
-                title: 'Register',
-                colour: Color(0xFF8E97FD),
-                onPressed: () {},
-              ),
-            ],
+          body: ModalProgressHUD(
+            inAsyncCall: showSpinner,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: <Widget>[
+                // Container(
+                //   decoration: BoxDecoration(
+                //     image: DecorationImage(
+                //       alignment: Alignment.center,
+                //       image: AssetImage('assets/images/create.png'),
+                //       fit: BoxFit.fill,
+                //     ),
+                //   ),
+                // ),
+                SizedBox(
+                  height: 48.0,
+                ),
+                TextField(
+                  textAlign: TextAlign.center,
+                  onChanged: (value) {
+                    email = value;
+                  },
+                  decoration: kTextFieldDecoration.copyWith(
+                      hintText: 'Enter your e-mail'),
+                  keyboardType: TextInputType.emailAddress,
+                ),
+                SizedBox(
+                  height: 8.0,
+                ),
+                TextField(
+                  obscureText: true,
+                  textAlign: TextAlign.center,
+                  onChanged: (value) {
+                    password = value;
+                  },
+                  decoration: kTextFieldDecoration.copyWith(
+                      hintText: 'Enter your password'),
+                ),
+                SizedBox(
+                  height: 24.0,
+                ),
+                RoundedButtons(
+                  title: 'Register',
+                  colour: Color(0xFF8E97FD),
+                  onPressed: () async {
+                    setState(() {
+                      showSpinner = true;
+                    });
+                    try {
+                      final newUser =
+                          await _auth.createUserWithEmailAndPassword(
+                              email: email, password: password);
+                      if (newUser != null) {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => WelcomeScreen()),
+                        );
+                      }
+                      setState(() {
+                        showSpinner = false;
+                      });
+                    } catch (e) {
+                      print(e);
+                    }
+                  },
+                ),
+              ],
+            ),
           ),
         ),
       ],
