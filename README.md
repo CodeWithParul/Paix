@@ -1,6 +1,6 @@
 # paix_app
 
-A new Flutter project.
+A new Flutter project -> A Meditation App for general use
 
 ## Getting Started
 
