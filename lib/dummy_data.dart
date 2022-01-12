@@ -26,16 +26,16 @@ const DUMMY_CATEGORIES = const [
     color: Color(0xFFB0C8ED),
     image: AssetImage('assets/images/three.png'),
   ),
-  Category(
-    title: 'Personal Growth',
-    id: 'c5',
-    color: Color(0xFF6CB28E),
-    image: AssetImage('assets/images/two.png'),
-  ),
-  Category(
-    title: 'Increase Happiness',
-    id: 'c6',
-    color: Color(0xFFFEB18F),
-    image: AssetImage('assets/images/four.png'),
-  ),
+  // Category(
+  //   title: 'Personal Growth',
+  //   id: 'c5',
+  //   color: Color(0xFF6CB28E),
+  //   image: AssetImage('assets/images/two.png'),
+  // ),
+  // Category(
+  //   title: 'Increase Happiness',
+  //   id: 'c6',
+  //   color: Color(0xFFFEB18F),
+  //   image: AssetImage('assets/images/four.png'),
+  // ),
 ];

@@ -20,6 +20,37 @@ class _BodyState extends State<Body> {
   bool showSpinner = false;
   String email;
   String password;
+
+  Future<void> authErrorHandle(String subtitle, BuildContext context) async {
+    showDialog(
+        context: context,
+        builder: (BuildContext context) {
+          return AlertDialog(
+            title: Row(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(right: 6.0),
+                  child: Image.network(
+                    'https://image.flaticon.com/icons/png/128/564/564619.png',
+                    height: 20,
+                    width: 20,
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text('ERROR OCCURRED'),
+                ),
+              ],
+            ),
+            content: Text(subtitle),
+            actions: [
+              TextButton(
+                  onPressed: () => Navigator.pop(context), child: Text('OK')),
+            ],
+          );
+        });
+  }
+
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -28,7 +59,7 @@ class _BodyState extends State<Body> {
         opacity: 0.3,
         color: Colors.grey.shade700,
         inAsyncCall: showSpinner,
-      child:SingleChildScrollView(
+        child: SingleChildScrollView(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
@@ -72,7 +103,11 @@ class _BodyState extends State<Body> {
                       showSpinner = false;
                     });
                   } catch (e) {
-                    print(e);
+                    authErrorHandle(e.message, context);
+                    setState(() {
+                      showSpinner = false;
+                    });
+                    //  print(e.message);
                   }
                 },
               ),

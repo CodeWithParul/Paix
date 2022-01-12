@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
-//import 'package:paix_app/models/category_backend.dart';
-import 'package:paix_app/screens/welcomescreen.dart';
 import 'package:firebase_core/firebase_core.dart';
+//import 'package:paix_app/screens/topics_screens.dart/music_screen.dart';
+//import 'package:paix_app/screens/topics_screens.dart/personal_growth_screen.dart';
+import 'package:paix_app/screens/welcomescreen.dart';
+import 'package:animated_splash_screen/animated_splash_screen.dart';
 
 void main() async {
   // Ensure that Firebase is initialized
@@ -17,28 +19,17 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'PAIX',
-      theme: ThemeData(
-        fontFamily: 'Source Sans Pro',
-        textTheme: ThemeData.light().textTheme.copyWith(
-              bodyText1: TextStyle(
-                  color: Colors.black,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 18),
-              bodyText2: TextStyle(
-                color: Colors.black,
-                fontWeight: FontWeight.w900,
-                fontSize: 18,
-              ),
-            ),
+      home: AnimatedSplashScreen(
+        splashIconSize: 150,
+        splash: Image.asset(
+          'assets/images/starticon.jpg',
+          
+        ),
+        nextScreen: WelcomeScreens(),
+        splashTransition: SplashTransition.fadeTransition,
+        // duration: 1500,
       ),
-      home: WelcomeScreens(),
-      // routes: {
-      //   '/': (ctx) => WelcomeScreens(),
-      //   CategoryBackend.routeName: (ctx) => CategoryBackend(),
-      // },
     );
   }
 }
-//0xFFFFEDF8
-//WelcomeScreen(),
+

@@ -10,7 +10,7 @@ class BackgroundImage extends StatelessWidget {
       shaderCallback: (bounds) => LinearGradient(
         colors: [
           Color(0xFFFFFFFF),
-          Color(0xFFC69AFF),
+          Color(0xFFEEE8F8),
         ],
         begin: Alignment.bottomCenter,
         end: Alignment.center,

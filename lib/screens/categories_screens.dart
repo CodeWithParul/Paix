@@ -37,7 +37,7 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFF8E97FD),
+      backgroundColor: Color(0xFF8EC9FD),
       //Color(0xFFC69AFF),
       appBar: AppBar(
         backgroundColor: Colors.transparent,
@@ -71,6 +71,7 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
                 //   ),
                 // ),
                 child: Container(
+                  // height: 30,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),
                       gradient:
@@ -79,7 +80,7 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
                         Color(0xFF32629C).withOpacity(.2),
                       ])),
                   child: Column(
-                    mainAxisAlignment: MainAxisAlignment.end,
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
                       Text(
                         "What brings you to PAIX",
@@ -92,7 +93,7 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
                         height: 30,
                       ),
                       Container(
-                        height: 50,
+                        height: 40,
                         margin: EdgeInsets.symmetric(horizontal: 40),
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
@@ -105,9 +106,9 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
                               fontWeight: FontWeight.bold),
                         )),
                       ),
-                      SizedBox(
-                        height: 30,
-                      ),
+                      // SizedBox(
+                      //   height: 30,
+                      // ),
                     ],
                   ),
                 ),
