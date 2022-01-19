@@ -40,7 +40,7 @@ This app is made for android as well as iphone, we'll be soon launching the ipho
 
 ## Feedback
 
-If you have any feedback, please reach out to us at nishant-ai@gmail.com
+If you have any feedback, please reach out to us at nishant-ai@outlook.com
 
 ## Development Framework
 
