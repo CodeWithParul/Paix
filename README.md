@@ -23,5 +23,5 @@ Our goal is to develop a free mobile app with a basic UI and nice UX, as well as
 
 ## ⌗ Data Flow Diagram:
 <p align="center">
-  ![App Screenshot](https://github.com/nishant-ai/Paix/blob/master/Paix%20Documentation%20Assets/DataFlow.png)
+  <img src="https://github.com/nishant-ai/Paix/blob/master/Paix%20Documentation%20Assets/DataFlow.png" />
 </p>
