@@ -18,8 +18,6 @@ Our goal is to develop a free mobile app with a basic UI and nice UX, as well as
 ![App Screenshot](https://github.com/nishant-ai/Paix/blob/master/Paix%20Documentation%20Assets/Picture%201.png)
 ![App Screenshot](https://github.com/nishant-ai/Paix/blob/master/Paix%20Documentation%20Assets/Picture%202.png)
 ![App Screenshot](https://github.com/nishant-ai/Paix/blob/master/Paix%20Documentation%20Assets/Picture%203.png)
-![App Screenshot](https://github.com/nishant-ai/Paix/blob/master/Paix%20Documentation%20Assets/Picture%204.png)
-![App Screenshot](https://github.com/nishant-ai/Paix/blob/master/Paix%20Documentation%20Assets/Picture%205.png)
 
 ## ⌗ Data Flow Diagram:
 <p align="center">
