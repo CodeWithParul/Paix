@@ -1,16 +1,45 @@
-# paix_app
 
-A new Flutter project -> A Meditation App for general use
+# Paix - A Meditation App
 
-## Getting Started
+Paix - A _French Word_ meaning **Peace**.
 
-This project is a starting point for a Flutter application.
+**Paix** is a free-to-use smartphone application. Developed as part of a Mini Project during our sophomore year of computer science undergraduate studies.
 
-A few resources to get you started if this is your first Flutter project:
+Our goal is to develop a free mobile app with a basic UI and nice UX, as well as minimum but essential features. We created this app to provide value to people's daily lives after noticing that the need for mental wellness has risen in recent times, which can be met through meditation (one of our app's features).
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 🧑🏻‍💻 Our Team:
+
+- [@CodeWithParul](https://www.github.com/CodeWithParul)
+- [@poorva-belwal](https://github.com/poorva-belwal)
+- [@nishant-ai](https://github.com/nishant-ai)
+## 📱 Screenshots
+
+![App Screenshot](https://github.com/nishant-ai/Paix/blob/master/Paix%20Documentation%20Assets/Picture%201.png)
+![App Screenshot](https://github.com/nishant-ai/Paix/blob/master/Paix%20Documentation%20Assets/Picture%202.png)
+![App Screenshot](https://github.com/nishant-ai/Paix/blob/master/Paix%20Documentation%20Assets/Picture%203.png)
+
+## ⌗ Data Flow Diagram:
+<p align="center">
+  <img src="https://github.com/nishant-ai/Paix/blob/master/Paix%20Documentation%20Assets/DataFlow.png" />
+</p>
+
+
+## FAQ
+
+#### Who is this app for?
+
+This app is built for anyone who wants to develop habit of meditation or relax between the busy schedules of day to day life.
+
+#### On which smartphone can i use this app?
+
+This app is made for android as well as iphone, we'll be soon launching the iphone version of app as it is under development.
+
+
+## Feedback
+
+If you have any feedback, please reach out to us at nishant-ai@outlook.com
+
+## Development Framework
+
+**Flutter** - Dart Programming.
