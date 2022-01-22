@@ -5,7 +5,7 @@ Paix - A _French Word_ meaning **Peace**.
 
 **Paix** is a free-to-use smartphone application. Developed as part of a Mini Project during our sophomore year of computer science undergraduate studies.
 
-Our goal is to develop a free mobile app with a basic UI and nice UX, as well as minimum but essential features. We created this app to provide value to people's daily lives after noticing that the need for mental wellness has risen in recent times, which can be met through meditation (one of our app's features).
+Our goal is to develop a free mobile app with a basic UI and nice UX, as well as a  minimum but essential features. We created this app to provide value to people's daily lives after noticing that the need for mental wellness has risen in recent times, which can be met through meditation (one of our app's features).
 
 
 ## 🧑🏻‍💻 Our Team:
