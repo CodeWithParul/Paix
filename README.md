@@ -29,7 +29,7 @@ Our goal is to develop a free mobile app with a basic UI and nice UX, as well as
 
 #### Who is this app for?
 
-This app is built for anyone who wants to develop habit of meditation or relax between the busy schedules of day to day life.
+This app is built for anyone who wants to develop the habit of meditation or relax between the busy schedules of day to day life.
 
 #### On which smartphone can i use this app?
 
