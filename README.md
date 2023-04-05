@@ -38,7 +38,7 @@ This app is made for android as well as iphone, we'll be soon launching the ipho
 
 ## Feedback
 
-If you have any feedback, please reach out to us at nishant-ai@outlook.com
+If you have any feedback, please reach out to us at singhparul.1204@gmail.com, nishant-ai@outlook.com
 
 ## Development Framework
 
